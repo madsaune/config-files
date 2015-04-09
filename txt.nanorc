@@ -1,0 +1,12 @@
+syntax "txt" "\.(txt)$"
+
+# Default
+color white "^.+$"
+
+color brightblue "^x .+$"
+color brightgreen "^\+ .+$"
+color brightred "^\- .+$"
+
+color brightyellow "`.+`"
+
+color cyan "^[#]+ .+$"

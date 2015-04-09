@@ -1,0 +1,18 @@
+set autoindent
+set brackets ""')>]}"
+set matchbrackets "(]}"
+set morespace
+set mouse
+set multibuffer
+set smooth
+set nonewlines
+include "/usr/share/nano/default.nanorc"
+include "/usr/share/nano/php.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/css.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/reST.nanorc"
+include "/usr/share/nano/markdown.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+include "~/Dropbox/dotfiles/txt.nanorc"
+set tabsize 4
