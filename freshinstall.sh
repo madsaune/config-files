@@ -41,12 +41,8 @@ git clone https://github.com/itchyny/lightline.vim bundle/lightline.vim
 
 # Dotfiles
 cd ~
-mkdir .dotfiles && cd .dotfiles
 git clone https://github.com/madsaune/dotfiles.git
-ln -s dotfiles/vim/.vimrc ~/.vimrc > /dev/null
-if [ $? -ne 0 ]; then
-    echo "Symbolic link for .vimrc already exists"
-fi
+ln -s dotfiles/vim/.vimrc ~/.vimrc && ln -s dotfiles/irssi .irssi
 
 # Youtube-dl
 curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
