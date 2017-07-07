@@ -27,6 +27,8 @@ apt-get install curl -y
 apt-get install traceroute -y
 apt-get install ffmpeg -y
 apt-get install pandoc -y
+apt-get install nodejs -y
+apt-get install npm -y
 
 # Vim setup
 apt-get install vim -y
