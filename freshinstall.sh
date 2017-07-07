@@ -61,3 +61,6 @@ fi
 #apt-get install wkhtmltopdf -y
 #apt-get install zlib1g-dev -y
 #gem install gimli
+
+#NodeJS stuff
+npm install -g vtop
