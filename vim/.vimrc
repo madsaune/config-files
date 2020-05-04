@@ -1,8 +1,25 @@
 scriptencoding utf-8
-set nocompatible
+set nocompatible "required for Vundle
+filetype off "required for Vundle
 
 " ---- PLUGINS ----
-packadd! dracula
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'preservim/nerdtree'
+
+" Languages
+Plugin 'hashivim/vim-terraform'
+Plugin 'godlygeek/tabular' "required for vim-markdown
+Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
+
+" Themes
+Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+
+call vundle#end()
 
 " ---- GENERAL SETTINGS ----
 filetype plugin indent on
