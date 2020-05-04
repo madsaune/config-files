@@ -17,6 +17,8 @@ set background=dark
 syntax on
 colorscheme gruvbox
 
+autocmd BufEnter * lcd %:p:h "Sets working directory to current open file
+
 " Move line up and down
 nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+1<CR>
@@ -56,18 +58,15 @@ set statusline+=\ %c:%l/%L
 set statusline+=\ %%%p
 set statusline+=\ %y 
 
+
+" ---- NERDTree ----
+let NERDTreeShowHidden=1 "show hidden files by default
+
 " Open NERDTree in current folder
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Sets working directory to current open file
-autocmd BufEnter * lcd %:p:h
-
-" Show hidden files in NERDTree by default
-let NERDTreeShowHidden=1
-
-" Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 " Go to last active tab
@@ -79,15 +78,8 @@ vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
-" Easy window switching
-nnoremap <silent> <M-Up> :wincmd k<CR>
-nnoremap <silent> <M-Down> :wincmd j<CR>
-nnoremap <silent> <M-Left> :wincmd h<CR>
-nnoremap <silent> <M-Right> :wincmd l<CR>
-
 " ---- MARKDOWN ----
 let g:vim_markdown_folding_disabled = 1
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 
 " ---- COLORSCHEME SWITCHING ----
 nnoremap <F1> :colorscheme dracula<CR> 
