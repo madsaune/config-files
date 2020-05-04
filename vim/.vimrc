@@ -8,6 +8,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 
 " Languages
 Plugin 'hashivim/vim-terraform'
@@ -107,6 +109,10 @@ nnoremap <C-Right> :tabnext<CR>
 
 " ---- MARKDOWN ----
 let g:vim_markdown_folding_disabled = 1
+
+" ---- GOYO & Limelight ----
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " ---- COLORSCHEME SWITCHING ----
 nnoremap <F1> :colorscheme dracula<CR> 
