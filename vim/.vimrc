@@ -1,19 +1,29 @@
 scriptencoding utf-8
+set nocompatible
 
 " ---- PLUGINS ----
 packadd! dracula
 
 " ---- GENERAL SETTINGS ----
 filetype plugin indent on
+
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+
 set number
 set cursorline
-set splitright " makes vsplit split to the right instead of left
-set encoding=utf-8
+
+set splitbelow splitright " defaults :sp to below and :vsp to the right
+
+set title
+set ruler
 set background=dark
+set rulerformat=%10(%l,%c%V%)
+set backspace=indent,eol,start
+set encoding=utf-8
+
 syntax on
 colorscheme gruvbox
 
