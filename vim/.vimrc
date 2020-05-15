@@ -32,15 +32,11 @@ set softtabstop=2
 set tabstop=2
 
 set number
-set cursorline
+"set cursorline
 
 set splitbelow splitright " defaults :sp to below and :vsp to the right
 
-set title
-set ruler
 set background=dark
-set rulerformat=%10(%l,%c%V%)
-set backspace=indent,eol,start
 set encoding=utf-8
 
 syntax on
@@ -78,7 +74,7 @@ set statusline=
 set statusline+=%#WildMenu#
 set statusline+=[%n]
 set statusline+=\ %F
-set statusline+=\ %{StatuslineGit()}
+set statusline+=%{StatuslineGit()}
 set statusline+=\ %m
 
 set statusline+=%=
