@@ -15,7 +15,6 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'godlygeek/tabular' "required for vim-markdown
 Plugin 'plasticboy/vim-markdown'
-Plugin 'fatih/vim-go'
 
 " Themes
 Plugin 'morhetz/gruvbox'
