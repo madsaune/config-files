@@ -65,3 +65,9 @@ cd ~/Nedlastinger
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install ./google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
+
+# Install Microsoft Teams
+cd ~/Nedlastinger
+wget "https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb"
+apt install ./teams_1.3.00.5153_amd64.deb
+rm ./teams_1.3.00.5153_amd64.deb
