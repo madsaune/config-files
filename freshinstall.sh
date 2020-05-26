@@ -59,3 +59,9 @@ sudo apt-get update && sudo apt-get install spotify-client
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 apt update && apt install code
+
+# Install Google Chrome
+cd ~/Nedlastinger
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
+rm ./google-chrome-stable_current_amd64.deb
