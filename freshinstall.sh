@@ -3,48 +3,44 @@
 apt-get update -y
 apt-get upgrade -y
 
-# Theming
-#add-apt-repository ppa:numix/ppa
-#apt-get update -y
-#apt-get install numix-icon-theme -y
+# Standard folders
 
-# Essentials
-apt-get install irssi -y
-apt-get install python3 -y
-apt-get install python3-pip -y
-pip3 install rtv
-apt-get install tmux -y
-apt-get install git -y
-apt-get install whois -y
-apt-get install convert -y
-apt-get install htop -y
-apt-get install glances -y
-apt-get install libreoffice -y
-apt-get install xclip -y
-apt-get install tree -y
-apt-get install acct -y
-apt-get install curl -y
-apt-get install traceroute -y
-apt-get install ffmpeg -y
-apt-get install pandoc -y
-apt-get install nodejs -y
-apt-get install npm -y
+mkdir ~/code
 
-# Vim setup
-apt-get install vim -y
-mkdir ~/.vim/ && cd ~/.vim
-git clone https://github.com/zcodes/vim-colors-basic.git && mv -r vim-colors-basic/colors/ .
-rm -rf vim-colors-basic/
+# Essential programs
+apt install -y \
+  git \
+  curl \
+  xclip \
+  whois \
+  htop \
+  glances \
+  tree \
+  acct \
+  traceroute \
+  ffmpeg \
+  pandoc \
+  evolution \
+  software-properties-common \
+  apt-transport-https \
+  wget
 
-mkdir autoload bundle && \
-curl -LSso autoload/pathogen.vim https://tpo.pe/pathogen.vim
+# Install NodeJS
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
-git clone https://github.com/itchyny/lightline.vim bundle/lightline.vim
+# Install VIM
+apt install vim
+git clone git@github.com:madsaune/dotfiles.git
+ln -s ~/code/dotfiles/vim/.vimrc ~/.vimrc
+mkdir -p ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim vim +PluginInstall +qall
 
-# Dotfiles
+# Install irssi
+apt install irssi
 cd ~
-git clone https://github.com/madsaune/dotfiles.git
-ln -s dotfiles/vim/.vimrc ~/.vimrc && ln -s dotfiles/irssi .irssi
+ln -s ~/code/dotfiles/irssi .irssi
 
 # Youtube-dl
 curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
@@ -53,14 +49,13 @@ if [ $? -eq 0 ]; then
 else
     echo "Youtube-dl was not installed"
 fi
-# Terminal colors : base16 xfce4
 
+# Install Spotify client
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 
-# Markdown to PDF
-#apt-get install rubygems -y
-#apt-get install wkhtmltopdf -y
-#apt-get install zlib1g-dev -y
-#gem install gimli
-
-#NodeJS stuff
-npm install -g vtop
+# Install Visual Studio Code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+apt update && apt install code
