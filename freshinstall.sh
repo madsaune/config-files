@@ -81,3 +81,21 @@ rm ./icaclient_20.04.0.21_amd64.deb
 
 # Finalize
 apt update && apt upgrade -y
+
+
+# Manual steps
+
+echo "# ---------------------------------------------"
+echo "# MANUAL STEPS"
+echo "# ---------------------------------------------"
+echo ""
+echo "# Window Manager"
+echo "1. Open Settings -> Windows Manager"
+echo "2. Select 'Keyboard' tab"
+echo "3. Set 'Maximize Window' to 'Super+Return'"
+echo "4. Set 'Set Window at top left' to 'Super+U'"
+echo "5. Set 'Set window at top right' to 'Super+I'"
+echo "6. Set 'Set window at bottom left' to 'Super+J'"
+echo "6. Set 'Set window at bottom right' to 'Super+K'"
+echo ""
+
