@@ -1,0 +1,22 @@
+{
+  "telemetry.enableCrashReporter": true,
+  "telemetry.enableTelemetry": false,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "workbench.colorTheme": "Gruvbox Dark (Soft)",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "vscode.markdown-language-features"
+  }
+}
