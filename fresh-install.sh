@@ -24,7 +24,11 @@ apt install -y \
   software-properties-common \
   apt-transport-https \
   wget \
-  keepassxc
+  keepassxc \
+  ca-certificates \
+  apt-transport-https \
+  lsb-release \
+  gnupg
 
 # Install NodeJS
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -46,9 +50,9 @@ ln -s ~/code/dotfiles/irssi .irssi
 # Youtube-dl
 curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 if [ $? -eq 0 ]; then
-    echo "Youtube-dl successfully installed"
+  echo "Youtube-dl successfully installed"
 else
-    echo "Youtube-dl was not installed"
+  echo "Youtube-dl was not installed"
 fi
 
 # Install Spotify client
@@ -78,6 +82,13 @@ cd ~/Nedlastinger
 wget -O "icaclient_20.04.0.21_amd64.deb" "https://downloads.citrix.com/17780/icaclient_20.04.0.21_amd64.deb?__gda__=1590564303_2a77fcf777a35520a1a8cf5d87142662"
 apt install ./icaclient_20.04.0.21_amd64.deb
 rm ./icaclient_20.04.0.21_amd64.deb
+
+# Install Azure CLI
+curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+apt update
+apt install azure-cli
 
 # Finalize
 apt update && apt upgrade -y
