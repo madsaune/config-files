@@ -23,7 +23,8 @@ apt install -y \
   evolution \
   software-properties-common \
   apt-transport-https \
-  wget
+  wget \
+  keepassxc
 
 # Install NodeJS
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
