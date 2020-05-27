@@ -72,3 +72,9 @@ cd ~/Nedlastinger
 wget "https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb"
 apt install ./teams_1.3.00.5153_amd64.deb
 rm ./teams_1.3.00.5153_amd64.deb
+
+# Install Citrix Workspace App
+cd ~/Nedlastinger
+wget "https://downloads.citrix.com/17780/icaclient_20.04.0.21_amd64.deb?__gda__=1590564303_2a77fcf777a35520a1a8cf5d87142662"
+apt install ./icaclient_20.04.0.21_amd64.deb
+rm ./icaclient_20.04.0.21_amd64.deb
