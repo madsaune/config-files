@@ -9,6 +9,8 @@
   "editor.fontSize": 14,
   "workbench.colorTheme": "Gruvbox Dark (Soft)",
 
+  "editor.multiCursorModifier": "ctrlCmd",
+
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
