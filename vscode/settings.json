@@ -7,8 +7,9 @@
   "editor.formatOnSave": true,
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "workbench.colorTheme": "Gruvbox Dark (Soft)",
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
 
+  "editor.codeLens": false,
   "editor.multiCursorModifier": "ctrlCmd",
 
   "[javascript]": {
@@ -20,5 +21,18 @@
     "editor.quickSuggestions": false,
     "editor.tabSize": 4,
     "editor.defaultFormatter": "vscode.markdown-language-features"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "python.pythonPath": "/usr/bin/python3",
+  "[python]": {
+    "editor.tabSize": 4
   }
 }
