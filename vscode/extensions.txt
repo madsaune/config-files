@@ -1,0 +1,15 @@
+aaron-bond.better-comments
+akamud.vscode-theme-onelight
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+hashicorp.terraform
+HookyQR.beautify
+jakebathman.mysql-syntax
+jdinhlife.gruvbox
+ms-azuretools.vscode-docker
+ms-vscode-remote.remote-wsl
+ms-vscode.powershell
+octref.vetur
+ritwickdey.LiveServer
+ryu1kn.partial-diff
+yzane.markdown-pdf
